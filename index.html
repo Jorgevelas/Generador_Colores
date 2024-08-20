@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Generador de Colores</title>
+
+    <style media="screen">
+      /* Estilo para la pagina */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background-color: #f0f2f5; /* Fondo gris claro */
+        color: #333; /* Color de texto principal */
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .random-color {
+        width: 400px;
+        padding: 20px;
+        background: #fff; /* Fondo blanco del contenedor */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+        margin: 20px;
+      }
+
+      h1 {
+        color: #2c3e50; /* Color del título */
+        margin-bottom: 10px;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      h2 {
+        color: #7f8c8d; /* Color del subtítulo */
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+      .display {
+        width: 100%;
+        height: 200px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(to right, #ffaaaa, #734c8f);
+        margin-bottom: 20px;
+      }
+
+      .codess {
+        padding: 10px;
+        margin-bottom: 20px;
+        font-family: "Courier New", Courier, monospace;
+        background: #f9f9f9; /* Fondo gris claro */
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .color1,
+      .color2 {
+        width: 60px;
+        height: 40px;
+        margin: 10px;
+        border: none;
+        border-radius: 4px;
+      }
+
+      select {
+        width: 150px;
+        height: 40px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-top: 20px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="random-color">
+      <h1>Generador de Colores</h1>
+      <h2>Aquí podrás generar tus colores</h2>
+
+      <div class="display" id="gradient"></div>
+      <div class="codess"></div>
+
+      <input type="color" class="color1" name="color1" value="#FFAAAA" />
+      <input type="color" class="color2" name="color2" value="#734C8F" />
+
+      <select name="toDirection">
+        <option value="to right">a la derecha</option>
+        <option value="to right bottom">a la derecha abajo</option>
+        <option value="to right top">a la derecha arriba</option>
+        <option value="to left">a la izquierda</option>
+        <option value="to left bottom">a la izquierda abajo</option>
+        <option value="to left top">a la izquierda arriba</option>
+        <option value="to bottom">abajo</option>
+        <option value="to top">arriba</option>
+      </select>
+    </div>
+
+    <!-- Inclusión del archivo JavaScript -->
+    <script src="gradient.js"></script>
+  </body>
+</html>
